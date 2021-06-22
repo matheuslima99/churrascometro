@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Teko&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Aladin', cursive;
+}
+body{
+    max-height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+.bg-image{
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    background-image: url(./assets/churrasco.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+.bg-image button{
+    padding: 8px 40px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -13%;
+    right: 48.5%;
+    transform: translateX(50%);
+    background: linear-gradient( #ff1a1a 0%, #330000 100%);
+    display: block;
+}
+.bg-image button:hover{
+    background:  #e60000;
+    transition: all 0.3s ease;
+}
+.modal{
+    max-width: 450px;
+    width: 100%;
+    height: 400px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    opacity: 0.8;
+}
+.modal-header h1{
+    font-size: 70px;
+    text-align: center;
+    color: #313131;
+    margin-bottom: -16px;
+}
+.modal-header h4{
+    text-align: right;
+    color: #313131;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+}
+.inputField{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+.inputField input{
+    padding: 4px 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 2px solid #313131;
+    border-radius: 5px;
+    outline: none;
+}
+.inputField input[type=number]::-webkit-inner-spin-button,
+.inputField input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.inputField-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.inputField-btn button{
+    margin-top: 20px;
+    width: 40%;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Teko', sans-serif;
+    border-radius: 5px;
+    background: #e60000;
+}
+.inputField-btn button:hover{
+    background: #ff1a1a;
+    transition: all 0.5s ease;
+}
+.footer-modal{
+    position: absolute;
+    bottom: -20%;
+    right: 50%;
+    text-align: center;
+    transform: translateX(50%);
+    width: 100%;
+}
+.footer-socials i{
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 8px;
+    opacity: 0.8;
+    padding: 0 8px;
+}
+.footer-modal i:hover{
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+.description span,
+.description a{
+    font-family: 'Teko', sans-serif;
+    color: #5f5f5f;
+}
+.description a{
+    text-decoration: none;
+}
+.inputField-result{
+    text-align: center;
+}
+.inputField-result h2{
+    margin-bottom: 15px;
+}
+.list-result ul{
+    margin-bottom: 25px;
+}
+.list-result li{
+    list-style: none;
+    font-size: 22px;
+}
+.list-result li .result-number{
+    color: #f00;
+}
+.modal-result{
+    max-width: 450px;
+    width: 100%;
+    height: 400px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    opacity: 0.8;
+    display: none;
+}
+.btn-back{
+    text-align: center;
+}
+.btn-back button{
+    margin-top: 20px;
+    width: 40%;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Teko', sans-serif;
+    border-radius: 5px;
+    background: #e60000;
+}
+.btn-back button:hover{
+    background:  #ff1a1a;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px){
+    .modal{
+        height: 450px;
+    }
+    .inputField-btn{
+        flex-direction: column;
+    }
+    .inputField-btn button{
+        width: 100%;
+    }
+    .btn-back button{
+        width: 100%;
+    }
+}
+@media (max-width: 425px){
+    .bg-image{
+        max-width: 320px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg-image button{
+        padding: 5px 12px;
+        font-size: 16px;
+        bottom: 10%;
+    }
+    .modal,
+    .modal-result{
+        max-width: 300px;
+        height: 350px;
+        padding: 25px;
+    }
+    .modal-header h1{
+        font-size: 45px;
+        margin-bottom: -14px;
+    }
+    .modal-header h4{
+        font-size: 15px;
+    }
+    .inputField{
+        margin-top: 20px;
+    }
+    .inputField input{
+        padding: 3px 8px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    .inputField-btn{
+        margin-top: 20px;
+    }
+    .inputField-btn button{
+        margin-top: 10px;
+        width: 100%;
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+    .footer-modal{
+        bottom: -22%;
+        right: 50%;
+    }
+    .footer-socials i{
+        font-size: 25px;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+    .description span,
+    .description a{
+        font-size: 10px;
+    }
+    .inputField-result h2{
+        font-size: 20px;
+    }
+    .list-result li{
+        font-size: 18px;
+    }
+    .btn-back button{
+        width: 100%;
+        font-size: 16px;
+    }
+}
